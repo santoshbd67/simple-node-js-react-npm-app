@@ -8,15 +8,9 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh './jenkins/scripts/test.sh'
-                sh 'aws s3 cp -r buil s3://test12345vk'
-            }
-        }
-        stage('Deliver') {
-            steps {
-                sh './jenkins/scripts/deliver.sh'
-                input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                sh './jenkins/scripts/kill.sh'
+                sh 'npm test'
+                sh 'npm run build'
+                #sh 'aws s3 cp -r buil s3://test12345vk'
             }
         }
     }

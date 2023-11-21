@@ -12,6 +12,7 @@ pipeline {
                 sh 'npm test'
                 sh 'npm run build'
                 sh 'aws s3  sync . s3://test-vk12/build'
+                sh './jenkins/scripts/deliver.sh'
             }
         }
     }

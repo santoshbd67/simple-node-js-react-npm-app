@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh '/root/.nvm/versions/node/v14.17.6/bin/npm install'
+                sh 'npm install'
             }
         }
         stage('Test') {

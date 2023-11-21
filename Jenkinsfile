@@ -10,7 +10,6 @@ pipeline {
             steps {
                 sh 'npm test'
                 sh 'npm run build'
-                #sh 'aws s3 cp -r buil s3://test12345vk'
             }
         }
     }

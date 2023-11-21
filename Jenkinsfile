@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'id'
-                sh 'sudo npm install'
+                sh 'sudo $(nvm which npm) install'
             }
         }
         stage('Test') {

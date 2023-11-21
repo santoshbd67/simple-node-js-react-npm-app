@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'id'
-                sh 'sudo /root/.nvm/versions/node/v14.17.5/bin/npm install'
+                sh 'sudo npm install'
             }
         }
         stage('Test') {

@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
     stages {
@@ -11,7 +12,8 @@ pipeline {
             steps {
                 sh 'npm test'
                 sh 'npm run build'
-                sh 'aws s3  sync . s3://test-vk12/build'
+                sh ' zip build.zip *'
+                sh 'aws s3 cp build.zip s3://test-vk12/build'
             }
         }
     }

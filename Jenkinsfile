@@ -13,7 +13,6 @@ pipeline {
                 sh 'npm test'
                 sh 'npm run build'
                 sh ' zip build.zip *'
-                sh 'aws s3 cp build.zip s3://test-vk12/build'
             }
         }
     }

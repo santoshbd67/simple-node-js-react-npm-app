@@ -9,7 +9,7 @@ pipeline {
                     sh 'sudo docker build -t simple-nodejs:1.0 .'
                 }
             }
-                    tage('Docker login') {
+                    stage('Docker login') {
                         steps{
                             sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
                         }

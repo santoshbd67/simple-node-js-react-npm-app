@@ -16,7 +16,7 @@ pipeline {
                  }
             stage('Build docker Image') {
                 steps {
-                    sh 'docker build -t simple-nodejs:1 .'
+                    sh 'docker build -t simple-nodejs:1.0 .'
                 }
             }
         }

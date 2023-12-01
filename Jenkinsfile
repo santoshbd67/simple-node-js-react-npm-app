@@ -12,7 +12,7 @@ pipeline {
                                 {
                                    stage('Push') {
                                        steps {
-                                           sh 'docker push simple-nodejs:1.0 '
+                                           sh 'sudo docker push simple-nodejs:1.0 '
                                        }
                                    }
                 }

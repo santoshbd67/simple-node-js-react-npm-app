@@ -4,12 +4,7 @@ pipeline {
     stages {
             stage('Build docker Image') {
                 steps {
-                    sh 'sudo docker build -t simple-nodejs:1.0 .'
-                                                       stage('Push') {
-                                       steps {
-                                           sh 'sudo docker push simple-nodejs:1.0 '
-                                       }
-                                   }
+                    sh 'sudo docker build -t simple-nodejs:1.0 .'                                      
                 }
             }
         }

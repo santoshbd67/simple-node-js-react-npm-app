@@ -18,6 +18,7 @@ pipeline {
                     } 
                         stage('push to dockerhub') {
                                 steps{
+                                    sh 'docker tag test-nodejs:1.0 santoshbd67/test-nodejs:latest'
                                     sh 'sudo docker push test-nodejs:1.0'
                                 }
                             }

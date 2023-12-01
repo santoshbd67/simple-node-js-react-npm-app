@@ -4,7 +4,7 @@ pipeline {
     stages {
             stage('Build docker Image') {
                 steps {
-                    sh 'sudo docker build -t simple-nodejs:1.0 ./jenkins/'
+                    sh 'sudo docker build -t simple-nodejs:1.0 .'
                 }
             }
         }

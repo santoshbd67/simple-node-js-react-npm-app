@@ -16,7 +16,7 @@ pipeline {
                     } 
                         stage('push to dockerhub') {
                                 steps{
-                                    sh 'docker push simple-nodejs:1.0'
+                                    sh 'sudo docker push simple-nodejs:1.0'
                                 }
                             }
                         }

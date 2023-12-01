@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKERHUB_CREDENTIALS = credentials('docker_login')
-        IMAGE_NAME = 'santoshbd67/new'
+        IMAGE_NAME = 'test-nodejs/new'
         IMAGE_TAG = '1.0'
     }
     stages {

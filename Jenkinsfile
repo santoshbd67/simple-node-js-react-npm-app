@@ -15,7 +15,7 @@ pipeline {
                 sh ' zip build.zip *'
                  }
             stage('Build docker Image'){
-                steps{
+                steps {
                     sh 'docker build -t simple-nodejs:1 .'
                 }
             }

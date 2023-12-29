@@ -8,7 +8,7 @@ pipeline {
     stages {
             stage('Build docker Image') {
                 steps {
-                    sh 'sudo docker build -t test-nodejs:1.0 .'
+                    sh 'docker build -t test-nodejs:1.0 .'
                 }
             }
                     stage('Docker login') {
@@ -18,8 +18,8 @@ pipeline {
                     } 
                         stage('push to dockerhub') {
                                 steps{
-                                    sh 'sudo docker tag test-nodejs:1.0 santoshbd67/test-nodejs:latest'
-                                    sh 'sudo docker push santoshbd67/test-nodejs:latest'
+                                    sh 'docker tag test-nodejs:1.0 santoshbd67/test-nodejs:latest'
+                                    sh 'docker push santoshbd67/test-nodejs:latest'
                                 }
                             }
                         }
